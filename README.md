@@ -18,13 +18,13 @@ _Uses RESTful routing._
 ## Setup/Installation Requirements
 > This application requires the .NETCore SDK - [Find your version here](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 
-1. Create a WordCounter.Solution directory.
+1. Create a VendorOrderTracker.Solution directory.
 ```
-mkdir WordCounter.Solution
+mkdir VendorOrderTracker.Solution
 ```
 2. Navigate inside your new directory.
 ```
-cd WordCounter.Solution
+cd VendorOrderTracker.Solution
 ```
 3. Clone this repository to your directory.
 ```
