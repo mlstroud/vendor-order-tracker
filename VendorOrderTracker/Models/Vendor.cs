@@ -30,5 +30,18 @@ namespace VendorOrderTracker.Models
     {
       return _instances;
     }
+
+    public static Vendor FindVendor(int id)
+    {
+      foreach (Vendor vendor in _instances)
+      {
+        if (vendor.Id == id)
+        {
+          return vendor;
+        }
+      }
+
+      return null;
+    }
   }
 }
