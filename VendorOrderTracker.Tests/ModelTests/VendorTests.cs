@@ -16,5 +16,17 @@ namespace VendorOrderTracker.Tests
 
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
+
+    [TestMethod]
+    public void GetName_ReturnsVendorName_String()
+    {
+      string name = "Pierre's Bakery";
+      string description = "test";
+      Vendor newVendor = new Vendor(name, description);
+
+      string result = newVendor.Name;
+
+      Assert.AreEqual(name, result);
+    }
   }
 }
