@@ -16,6 +16,16 @@ namespace VendorOrderTracker.Models
     {
       Title = title;
       Description = description;
+
+      if (decimal.TryParse(price, out decimal convertedPrice))
+      {
+        Price = convertedPrice;
+      }
+      else
+      {
+        Price = 0m;
+      }
+
       IDCount++;
       Id = IDCount;
       _instances.Add(this);
