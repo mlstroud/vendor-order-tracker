@@ -26,6 +26,7 @@ namespace VendorOrderTracker.Models
         Price = 0m;
       }
 
+      Date = date;
       IDCount++;
       Id = IDCount;
       _instances.Add(this);
