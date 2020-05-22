@@ -21,7 +21,11 @@
           </div>
           <div class="panel-body">
             <div class="description" style="float:left;">
-              <blockquote>@vendor.Description</blockquote>
+              <blockquote>
+                <strong>Description</strong><br>
+                @vendor.Description<br><br>
+                <strong>Total Orders:</strong> @vendor.Orders.Count
+              </blockquote>
             </div>
 
             <a href='/vendors/@vendor.Id/orders'>
