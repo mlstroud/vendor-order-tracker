@@ -28,5 +28,17 @@ namespace VendorOrderTracker.Tests
 
       Assert.AreEqual(name, result);
     }
+
+    [TestMethod]
+    public void GetDescription_ReturnsVendorDescription_String()
+    {
+      string name = "test";
+      string description = "Local bread and pastry shop.";
+      Vendor newVendor = new Vendor(name, description);
+
+      string result = newVendor.Description;
+
+      Assert.AreEqual(description, result);
+    }
   }
 }
