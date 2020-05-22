@@ -37,7 +37,7 @@ dotnet run
 
 ## Known Bugs
 
-There are no known bugs at the time of this update.
+* Certain css style aspects such as float would not apply correctly via linked script, and were hardcoded into their elements until issue is resolved.
  
 ## Support and contact details
 
