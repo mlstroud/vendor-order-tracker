@@ -17,7 +17,7 @@ namespace VendorOrderTracker.Controllers
     public ActionResult Create(string name, string description)
     {
       Vendor vendor = new Vendor(name, description);
-      return RedirectToAction("Index");
+      return RedirectToAction("Index", "Home");
     }
 
     [HttpGet("/vendors/new")]
