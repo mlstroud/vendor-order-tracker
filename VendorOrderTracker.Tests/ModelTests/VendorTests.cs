@@ -24,30 +24,6 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
-    public void GetName_ReturnsVendorName_String()
-    {
-      string name = "Pierre's Bakery";
-      string description = "test";
-      Vendor newVendor = new Vendor(name, description);
-
-      string result = newVendor.Name;
-
-      Assert.AreEqual(name, result);
-    }
-
-    [TestMethod]
-    public void GetDescription_ReturnsVendorDescription_String()
-    {
-      string name = "test";
-      string description = "Local bread and pastry shop.";
-      Vendor newVendor = new Vendor(name, description);
-
-      string result = newVendor.Description;
-
-      Assert.AreEqual(description, result);
-    }
-
-    [TestMethod]
     public void VendorConstructor_CreatesUniqueIdForInstances_Int()
     {
       Vendor newVendor1 = new Vendor("test", "test");
@@ -69,6 +45,30 @@ namespace VendorOrderTracker.Tests
       List<Vendor> result = Vendor.GetAllVendors();
 
       CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void GetName_ReturnsVendorName_String()
+    {
+      string name = "Pierre's Bakery";
+      string description = "test";
+      Vendor newVendor = new Vendor(name, description);
+
+      string result = newVendor.Name;
+
+      Assert.AreEqual(name, result);
+    }
+
+    [TestMethod]
+    public void GetDescription_ReturnsVendorDescription_String()
+    {
+      string name = "test";
+      string description = "Local bread and pastry shop.";
+      Vendor newVendor = new Vendor(name, description);
+
+      string result = newVendor.Description;
+
+      Assert.AreEqual(description, result);
     }
   }
 }
