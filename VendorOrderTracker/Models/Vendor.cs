@@ -17,11 +17,18 @@ namespace VendorOrderTracker.Models
       Description = description;
       IDCount++;
       Id = IDCount;
+      _instances.Add(this);
     }
 
     public static void ClearAll()
     {
       _instances.Clear();
+      IDCount = 0;
+    }
+
+    public static List<Vendor> GetAllVendors()
+    {
+      return _instances;
     }
   }
 }
