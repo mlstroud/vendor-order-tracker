@@ -66,5 +66,17 @@ namespace VendorOrderTracker.Tests
 
       Assert.AreEqual(description, result);
     }
+
+    [TestMethod]
+    public void GetPrice_ReturnsOrderPrice_Decimal()
+    {
+      string stringPrice = "9.99";
+      decimal expectedPrice = 9.99m;
+      Order newOrder = new Order("test", "test", stringPrice, "test");
+
+      decimal result = newOrder.Price;
+
+      Assert.AreEqual(expectedPrice, result);
+    }
   }
 }
