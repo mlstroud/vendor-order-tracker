@@ -15,6 +15,17 @@
   background-color: white;
 }
 
+.panel-header{
+
+  font-weight: bold;
+}
+
+
+.panel {
+  box-shadow: 1px 1px 3px black;
+  margin-bottom: 10px;
+}
+
 #splash {
   text-align: center;
 }
