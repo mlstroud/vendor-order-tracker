@@ -55,5 +55,16 @@ namespace VendorOrderTracker.Tests
 
       Assert.AreEqual(title, result);
     }
+
+    [TestMethod]
+    public void GetDescription_ReturnsOrderDescription_String()
+    {
+      string description = "100 Danish and 50 Baguettes";
+      Order newOrder = new Order("test", description, "test", "test");
+
+      string result = newOrder.Description;
+
+      Assert.AreEqual(description, result);
+    }
   }
 }
