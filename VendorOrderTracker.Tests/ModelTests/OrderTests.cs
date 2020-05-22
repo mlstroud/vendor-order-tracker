@@ -44,5 +44,16 @@ namespace VendorOrderTracker.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetTitle_ReturnsOrderTitle_String()
+    {
+      string title = "Donut Order #1";
+      Order newOrder = new Order(title, "test", "test", "test");
+
+      string result = newOrder.Title;
+
+      Assert.AreEqual(title, result);
+    }
   }
 }
