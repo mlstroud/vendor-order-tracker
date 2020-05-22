@@ -1,10 +1,42 @@
+@using VendorOrderTracker.Models;
 @{
   Layout = "_Layout";
 }
 
 <div class="row">
   <div class="col-md-8">
+    @if(@Model.Count == 0) 
+    {
+      <div class="panel">
+        <div class="panel-header">
+          You do not have any vendors at this time.
+        </div>
+        <div class="panel-body">
+          Test
+        </div>
 
+      </div>
+    }
+    else
+    {
+      foreach(Vendor vendor in @Model)
+      {
+        <div class="panel">
+          <div class="panel-header bg-primary">
+            <h4>@vendor.Name</h4>
+          </div>
+          <div class="panel-body">
+            <div class="description" style="float:left;">
+              <blockquote>@vendor.Description</blockquote>
+            </div>
+
+            <a href="#">
+              <button class="btn btn-primary" style="float: right;">View Vendor</button>
+            </a>
+          </div>
+        </div>
+      }
+    }
   </div>
   <div class="col-md-4">
     <a href="/vendors/new">
