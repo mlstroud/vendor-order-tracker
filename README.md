@@ -11,7 +11,7 @@ _The user can create vendors and assign them orders to track business needs._
 _Uses RESTful routing._
 
 ## Demo
-![Gif demo of website](https://raw.githubusercontent.com/mlstroud/vendor-order-tracker/master/vendorordertrackerdemo.gif | width=500)
+![Gif demo of website](https://raw.githubusercontent.com/mlstroud/vendor-order-tracker/master/vendorordertrackerdemo.gif)
 ## Specs
 
 
