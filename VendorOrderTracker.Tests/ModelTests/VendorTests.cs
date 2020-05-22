@@ -70,5 +70,17 @@ namespace VendorOrderTracker.Tests
 
       Assert.AreEqual(description, result);
     }
+
+    [TestMethod]
+    public void FindVendor_ReturnsVendor_Vendor()
+    {
+      Vendor newVendor1 = new Vendor("test", "test");
+      Vendor newVendor2 = new Vendor("test", "test");
+      Vendor newVendor3 = new Vendor("test", "test");
+
+      Vendor result = Vendor.FindVendor(3);
+
+      Assert.AreEqual(newVendor3, result);
+    }
   }
 }
