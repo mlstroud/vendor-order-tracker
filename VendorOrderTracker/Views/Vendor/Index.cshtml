@@ -7,23 +7,17 @@
   <div class="col-md-8">
     @if(@Model.Count == 0) 
     {
-      <div class="panel">
-        <div class="panel-header">
-          You do not have any vendors at this time.
-        </div>
-        <div class="panel-body">
-          Test
-        </div>
-
-      </div>
+      <p><strong>You do not have any current vendors.</strong></p>
     }
     else
     {
       foreach(Vendor vendor in @Model)
       {
-        <div class="panel">
-          <div class="panel-header bg-primary">
-            <h4>@vendor.Name</h4>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <div class="panel-title">
+              <h4>@vendor.Name</h4>
+            </div>
           </div>
           <div class="panel-body">
             <div class="description" style="float:left;">
@@ -31,7 +25,7 @@
             </div>
 
             <a href="#">
-              <button class="btn btn-primary" style="float: right;">View Vendor</button>
+              <button class="btn btn-primary" style="float: right;">View Orders</button>
             </a>
           </div>
         </div>
