@@ -90,6 +90,8 @@ namespace VendorOrderTracker.Tests
       Order newOrder1 = new Order();
       Order newOrder2 = new Order();
       List<Order> orderList = new List<Order> { newOrder1, newOrder2 };
+      newVendor.AddOrder(newOrder1);
+      newVendor.AddOrder(newOrder2);
 
       List<Order> result = newVendor.Orders;
 
