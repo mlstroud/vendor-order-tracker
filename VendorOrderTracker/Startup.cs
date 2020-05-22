@@ -26,6 +26,7 @@ namespace VendorOrderTracker
     public void Configure(IApplicationBuilder app)
     {
       app.UseDeveloperExceptionPage();
+      app.UseStaticFiles();
 
       app.UseMvc(routes =>
       {
@@ -38,7 +39,6 @@ namespace VendorOrderTracker
       {
         await context.Response.WriteAsync("Something went wrong!");
       });
-
     }
   }
 }
