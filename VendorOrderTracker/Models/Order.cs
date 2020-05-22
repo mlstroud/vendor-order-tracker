@@ -16,6 +16,7 @@ namespace VendorOrderTracker.Models
     {
       IDCount++;
       Id = IDCount;
+      _instances.Add(this);
     }
 
     public static void ClearAll()
