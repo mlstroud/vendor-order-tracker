@@ -37,10 +37,5 @@ namespace VendorOrderTracker.Models
       _instances.Clear();
       IDCount = 0;
     }
-
-    public static List<Order> GetAllOrders()
-    {
-      return _instances;
-    }
   }
 }
