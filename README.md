@@ -12,8 +12,39 @@ _Uses RESTful routing._
 
 ## Demo
 ![Gif demo of website](https://raw.githubusercontent.com/mlstroud/vendor-order-tracker/master/vendorordertrackerdemo.gif)
-## Specs
 
+## Specs
+### Behaviors
+| Behavior                                                   | Input                            | Output                                 |
+|:-----------------------------------------------------------|:---------------------------------|---------------------------------------:|
+| Program will allow user to add a vendor.                   | "Pierre's Bakery"                | "Pierre's Bakery"                      |
+| Program will allow a user to view all vendors.             | "Pierre's Bakery"                | "Pierre's Bakery", "Top Pot Doughnuts" |
+| Program will allow a user to add an order to a vendor.     | "Pierre's Bakery" -> "15 bagels" | "15 bagels"                            |
+| Program will allow a user to view all orders for a vendor. | "Pierre's Bakery"                | "25 donuts, "15 bagels"                |
+
+### Test Specs
+| Behavior                                                  | Input                                           | Output                                                                             |
+|:----------------------------------------------------------|:------------------------------------------------|-----------------------------------------------------------------------------------:|
+| Vendor should create a new instance of Vendor             | Vendor vendor = new Vendor()                    | vendor.GetType() = Vendor                                                          |
+| Vendor should store a name and description.               | ...vendor = new Vendor(name, description)       | vendor.Name = "...", vendor.Description = "..."                                    |
+| Vendor should assign a unique ID to its instances.        | ...vendor3 = new Vendor()                       | vendor3.Id = 3;                                                                    |
+| Vendor should create a static list of Vendors             | ...vendor2 = new Vendor()                       | Vendor.GetAllVendors = { vendor1, vendor2 }                                        |
+|                                                           |                                                 |                                                                                    |
+| Order should create a new instance of Order.              | Order order = new Order()                       | order.GetType() = Order                                                            |
+| Order should store a title, description, price, and date. | ...order = new Order(name, desc.., price, date) | order.Name = "..", order.Description = "..", order.Price = "..", order.Date = ".." |
+| Order should assign a unique ID to its instances.         | ...order3 = new Order()                         | order.Id = 3                                                                       |
+
+### RESTful Routing
+| Path                     | Route          | Method |
+|:-------------------------|:---------------|-------:|
+| /                        | Home->Index    | Get    |
+| /vendors                 | Vendor->Index  | GET    |
+| /vendors/new             | Vendor->New    | GET    |
+| /vendors                 | Vendor->Create | POST   |
+| /vendors/{id}            | Vendor->Show   | GET    |
+| /vendors/{id}/orders     | Orders->Index  | GET    |
+| /vendors/{id}/orders/new | Orders->New    | GET    |
+| /vendors/{id}/orders     | Orders->Create | POST   |
 
 ## Setup/Installation Requirements
 > This application requires the .NETCore SDK - [Find your version here](https://dotnet.microsoft.com/download/dotnet-core/2.2)
