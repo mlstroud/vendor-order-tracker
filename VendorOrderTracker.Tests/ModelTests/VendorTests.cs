@@ -40,5 +40,17 @@ namespace VendorOrderTracker.Tests
 
       Assert.AreEqual(description, result);
     }
+
+    [TestMethod]
+    public void VendorConstructor_CreatesUniqueIdForInstances_Int()
+    {
+      Vendor newVendor1 = new Vendor("test", "test");
+      Vendor newVendor2 = new Vendor("test", "test");
+      Vendor newVendor3 = new Vendor("test", "test");
+
+      int result = newVendor2.Id;
+
+      Assert.AreEqual(2, result);
+    }
   }
 }
