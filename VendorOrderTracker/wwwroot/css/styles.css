@@ -1,5 +1,14 @@
+.btn {
+  font-weight: bold;
+  text-shadow: 1px 1px 1px black;
+  box-shadow: 1px 1px 3px black;
+}
 
 .jumbotron {
   text-align: center;
   background-color: white;
+}
+
+#splash {
+  text-align: center;
 }
