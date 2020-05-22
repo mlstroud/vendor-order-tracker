@@ -18,6 +18,7 @@ namespace VendorOrderTracker.Models
       IDCount++;
       Id = IDCount;
       _instances.Add(this);
+      Orders = new List<Order>();
     }
 
     public static void ClearAll()
@@ -42,6 +43,11 @@ namespace VendorOrderTracker.Models
       }
 
       return null;
+    }
+
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
     }
   }
 }
