@@ -1,0 +1,40 @@
+@using VendorOrderTracker.Models;
+@{
+  Layout = "_Layout";
+}
+
+<div class="row">
+  <div class="col-md-8">
+    @if(@Model["orders"].Count == 0) 
+    {
+      <p><strong>You do not have any current orders.</strong></p>
+    }
+    else
+    {
+      foreach(Order order in @Model["orders"])
+      {
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <div class="panel-title">
+              <h4>@order.Title</h4>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="description" style="float:left;">
+              <blockquote>@order.Description</blockquote>
+            </div>
+
+            @* <a href="#">
+              <button class="btn btn-primary" style="float: right;">View Orders</button>
+            </a> *@
+          </div>
+        </div>
+      }
+    }
+  </div>
+  <div class="col-md-4">
+    <a href='/vendors/@Model["vendor"].Id/orders/new'>
+      <button type="submit" class="btn btn-primary">Add Order</button>
+    </a>
+  </div>
+</div>
