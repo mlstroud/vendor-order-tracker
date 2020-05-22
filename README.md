@@ -47,6 +47,8 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 
 * C#
 * .NET Core
+* MVC
+* RESTful Design
 * MSTest
 * Git
 
