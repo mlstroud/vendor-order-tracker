@@ -15,6 +15,8 @@ namespace VendorOrderTracker.Models
     {
       Name = name;
       Description = description;
+      IDCount++;
+      Id = IDCount;
     }
   }
 }
